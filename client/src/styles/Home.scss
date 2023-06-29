@@ -1,0 +1,28 @@
+
+.homeContainer{
+    padding: 0;
+    margin: 0;
+    background-image: url('https://http2.mlstatic.com/D_NQ_NP_240415-MLA25232307782_122016-O.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    
+    h2{
+        color: white;
+        font-size: 60px;
+        font-family:  'Roboto Flex', sans-serif;
+        text-align: center;
+    }
+
+    .shop{
+        @include button-shop;
+    }
+
+}

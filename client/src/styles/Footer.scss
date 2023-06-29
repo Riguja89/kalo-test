@@ -1,0 +1,54 @@
+.footer-container{
+    border-top: solid 1px rgb(177, 177, 177);
+    height: 30%;
+    box-shadow:5px -2px 5px rgb(177, 177, 177);
+
+    .info-footer-container{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        font-size: small;
+        font-weight: bold;
+        gap: 3%;
+        .products{
+            border-right: solid 1px rgb(177, 177, 177);;
+        }
+        .info-contacto{
+            border-right: solid 1px rgb(177, 177, 177);;
+        }
+        .segura{
+            border-right: solid 1px rgb(177, 177, 177);;
+        }
+        .redes-sociales{
+            display: flex;
+            flex-flow: row;
+            gap: 5px;
+            img{
+                margin-top: 12px;
+               
+            }
+        }
+    }
+    .pufi{
+        img{
+            width: 60px;
+            margin: 5%;
+        }
+    }
+
+    .footer-footer{
+        border-top: solid 1px rgb(177, 177, 177);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        color: rgb(117, 117, 117);
+        font-size: small;
+        p{
+            margin-left: 5%;
+        }
+        .brand-logo{
+            text-align: end;
+            padding-right: 5%;
+        }
+    }
+}

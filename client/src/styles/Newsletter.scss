@@ -1,0 +1,41 @@
+.newsletter-container{
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+   // font-weight: 300;
+    font-family:  'Roboto Flex', sans-serif;
+   // height: 80vh;
+   h3{
+    color: gray;
+    font-size: medium;
+    margin: 8px;
+}
+h1{
+    padding: 0%;
+    margin: 0%;
+}
+   .formulario{
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 25%;
+    margin-right : 25%;
+    padding-bottom: 4px;
+    padding-top: 10px;
+    height: 30px;
+    justify-items: center;
+    input{
+       
+        border: none;
+        width: 90%;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        border: none;
+        background-color: transparent;
+    }
+   }
+   .error{
+    color: red;
+   }
+}

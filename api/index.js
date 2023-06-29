@@ -1,6 +1,4 @@
-const express= require("express");
-const app = express();
+const app=require('./src/app.js')
+const PORT=4242;
 
-const PORT=40000;
-
-app.listen(PORT,()=>console.log("Express listenning in port: " + PORT))
+app.listen(PORT, () => console.log("Node server listening on port " + PORT));

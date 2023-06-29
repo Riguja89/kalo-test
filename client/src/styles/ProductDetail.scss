@@ -1,0 +1,14 @@
+.productdetail-container{
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    .back-arrow{
+        margin: 2%;
+        text-align: start;
+    }
+    .shop{ 
+        @include button-shop;
+        color: black;
+    }
+   
+}

@@ -1,0 +1,23 @@
+@mixin button-shop{
+    height: 45px;
+    width: 110px;
+    background-color: transparent;
+    border-color: white;
+    color: white;
+
+    &:hover{
+        background-color: rgba(125,125,125,0.5);
+    }
+}
+ @mixin image-product{
+    height: 20%;
+ }
+
+ @mixin button-vermas{
+    border: none;
+    background: transparent;
+    margin-top: 5%;
+    &:hover{
+        background-color: rgba(125,125,125,0.5);
+    }
+ }

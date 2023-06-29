@@ -1,0 +1,28 @@
+.compracart-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 20%;
+    margin-right: 20%;
+    border: solid 1px black;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+    button{
+        border-radius: 2%;
+        width: 100px;
+       
+        &:hover{
+            background-color: white;
+            color: red;
+        }
+    }
+}
+
+.compras-ontainer{
+    margin: 5%;
+    text-align: center;
+    .back-arrow{
+        text-align: start;
+    }
+}

@@ -1,0 +1,31 @@
+.productcart-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    .image-container{
+        background-repeat: no-repeat;
+        background-size:cover;
+        display: flex;
+        align-items: center;
+        .shop{
+            @include button-shop;
+            margin: 0 auto;
+        }
+    }
+    .info-container{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        vertical-align: middle;
+        justify-content: center;
+        h2{
+            font-weight:600;
+            font-size: xx-large
+        }
+
+        .ver-mas{
+            @include button-vermas;
+        }
+    }
+}
