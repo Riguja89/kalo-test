@@ -3,21 +3,22 @@ import { Link } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';
 import { addToCompra } from '../redux/actions';
 
-const ProductCart=({id, name, description, image, imagefondo})=>{
+const ProductCart=({id, index, price, name, description, image, imagefondo})=>{
 
     const dispatch=useDispatch();
     const products = useSelector((state) => state.products)
 
     const comprar=()=>{
-        dispatch(addToCompra(id))
+        dispatch(addToCompra({id, index, price, name, description, image, imagefondo}))
     }
 
     return(
         <div className='productcart-container' id={name}>
-            {id%2===0?<>
+            {index%2!==0?<>
             <div className='info-container'>
             <img className='imagen-info' height="150px" src={image} alt="" />
             <h2>{name}</h2>
+            <h2>$ {price}</h2>
             <hr />
             <p>{description}</p>
             <Link to={`/productos/${id}`}>
@@ -39,6 +40,7 @@ const ProductCart=({id, name, description, image, imagefondo})=>{
             <div className='info-container'>
             <img className='imagen-info' height="150px" src={image} alt="" />
             <h2>{name}</h2>
+            <h2>$ {price}</h2>
             <hr />
             <p>{description}</p>
             <Link to={`/productos/${id}`}>

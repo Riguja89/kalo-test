@@ -9,7 +9,7 @@ const ProductDetail=()=>{
 
     const { productId } = useParams();
     const dispatch=useDispatch();
-    const producto = useSelector((state) => state.product); 
+    let producto = useSelector((state) => state.product); 
     const navigate = useNavigate();
 
     useEffect(()=>{
@@ -20,7 +20,8 @@ const ProductDetail=()=>{
         navigate(-1)
     }
     const comprar=()=>{
-        dispatch(addToCompra(producto.id))
+        producto.id=producto._id;
+        dispatch(addToCompra(producto))
     }
 
 
@@ -37,7 +38,7 @@ const ProductDetail=()=>{
             </div>
            <h1>{producto.name } </h1>
            <h2>{producto.description }</h2>         
-        
+           <h2>$ {producto.price } usd</h2>   
             </div>
 
             <button onClick={comprar}  className='shop'>COMPRAR</button>

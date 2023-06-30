@@ -2,6 +2,7 @@ const initialState = {
     products: [],
     product:{},
     compras:[],
+    total: 0,
   };
 
 
@@ -36,17 +37,30 @@ const rootReducer = (state = initialState, action) => {
             return{
               
                 ...state,
-                compras: state.compras.concat([action.payload])
+                compras: state.compras.concat([action.payload]),
+                total: state.total+action.payload.price
+    
+            };
+
+            case "TOTAL_UPDATE":
+            //console.log(action.payload);
+           
+            return{
+              
+                ...state,
+                total: state.total + action.payload
     
             };
 
             case "DEL_COMPRA":
           
           const compraux=state.compras.filter((c=>c.id!==action.payload));
-          console.log(compraux)
+          const total=compraux.reduce((acum,current)=>acum+current.price,0)
+
           return{
               ...state,
-             compras:compraux
+             compras:compraux,
+             total: total
   
           };
 

@@ -1,6 +1,7 @@
 const express= require("express");
 const app = express();
-const routes = require('./stripe.js');
+const stripeRoutes = require('./stripe.js');
+const productRoutes = require('./routes/product.js');
 
 require('./db.js')
 
@@ -21,6 +22,7 @@ app.get("/",(req, res)=>{
   res.send("hola como vas? tu")
 });
 
-app.use('/', routes);
+app.use('/', stripeRoutes);
+app.use('/api', productRoutes);
 
 module.exports=app;

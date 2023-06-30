@@ -17,10 +17,12 @@ const ProductsContainer=()=>{
 
     return(
         <div className='products-container'>
-            {products.map((product)=>(
-                 <ProductCart key={product.id} 
-                 id={product.id}
+            {products.map((product,i)=>(
+                 <ProductCart key={product._id} 
+                 id={product._id}
+                 index={i}
                  name={product.name}
+                 price={product.price}
                  description={product.description}
                  image={product.image}
                  imagefondo={product.imagefondo}

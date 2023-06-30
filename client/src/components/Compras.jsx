@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Compras=()=>{
     const compras = useSelector((state) => state.compras)
+    const total = useSelector((state) => state.total)
     const navigate = useNavigate();
 
     const goback=()=>{
@@ -26,15 +27,22 @@ const Compras=()=>{
             {compras.length?<>
                { compras.map(producto=>(
                 <CompraCart 
-                key={producto.id}
-                id={producto.id}
+                key={producto._id||producto.id}
+                id={producto._id||producto.id}
                 image={producto.image}
                 name={producto.name}
+                price={producto.price}
+                total={total}
                 ></CompraCart>
             ))}
             <div>
+                <div>
+                    <h2>
+                    Total: ${total} Usd
+                    </h2>
+                </div>
             <Link to="/checkout">
-            <button >Checkout</button>
+            <button className='checkout-button'>Checkout</button>
             </Link>              
             </div>
             </>:<>
